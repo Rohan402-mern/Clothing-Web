@@ -3,21 +3,65 @@ import { createSlice } from '@reduxjs/toolkit'
 export const counterSlice = createSlice({
   name: 'counter',
   initialState: {
-    value: 10,
+    move: "on",
+    cateogry : "",
+    slide:1,
+    // cart:0,
+    items:[],
   },
   reducers: {
     increment: (state) => {
-      state.value += 1
+     state.move = state.move  === "on"? "off":"on"
+      
     },
-    decrement: (state) => {
-      state.value -= 1
+    cat1:(state)=>{
+      state.cateogry = state.cateogry  === "new"? "":"new"
     },
-    incrementByAmount: (state, action) => {
-      state.value += action.payload
+
+    cat2:(state)=>{
+      state.cateogry =  ""
+    },
+    cat3:(state)=>{
+      state.cateogry = state.cateogry  === "men"? "":"men"
+    },
+    cat4:(state)=>{
+      state.cateogry = state.cateogry  === "women"? "":"women"
+    },
+    cat5:(state)=>{
+      state.cateogry = state.cateogry  === "kids"? "":"kids"
+    },
+    cat6:(state)=>{
+      state.cateogry = state.cateogry  === "collection"? "":"collection"
+    },
+    cat7:(state)=>{
+      state.cateogry = state.cateogry  === "shoes"? "":"shoes"
+    },
+    cat8:(state)=>{
+      state.cateogry = state.cateogry  === "bags"? "":"bags"
+    },
+    cat9:(state)=>{
+      state.cateogry = state.cateogry  === "lacoste"? "":"lacoste"
+    },
+    cat10:(state)=>{
+      state.cateogry ="login"
+    },
+    cat11:(state)=>{
+      state.cateogry =""
+    },
+    cat12:(state,newslide)=>{
+      state.slide = newslide.payload
+    },
+    addToCart: (state, action) => {
+      const itemInCart = state.items.find(item => item.id === action.payload.id);
+      if (itemInCart) {
+        itemInCart.quantity += 1;
+      } else {
+        state.items.push({ ...action.payload, quantity: 1 });
+      }
     },
   },
 })
 
-export const { increment, decrement, incrementByAmount } = counterSlice.actions
+export const { increment,cat1,cat2,cat3,cat4,cat5,cat6,cat7,cat8,cat9,cat10,cat11,cat12,addToCart } = counterSlice.actions
 
 export default counterSlice.reducer

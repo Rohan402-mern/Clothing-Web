@@ -1,0 +1,55 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Figtree';
+}
+.spring{
+background-color: white;
+display: flex;
+/* align-items: center; */
+}
+.spring img{
+    margin-top: 40px;
+    width: 56.5%;
+
+}
+.spring-div{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-left: 120px;
+    justify-content: center;
+}
+.spring > div >h1{
+font-size: 48px;
+font-weight: 500;
+color: rgb(0, 45, 24);
+width: 240px;
+}
+.spring p{
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(0, 45, 24);
+    width: 310px;
+}
+.spring-btn{
+    display: flex;
+    gap: 13px;
+    /* background-color: red; */
+}
+.spring-btn button{
+    cursor: pointer;
+    padding: 0px 15px;
+    padding-top: 15px ;
+    padding-bottom: 15px ;
+    flex: none;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #002D18;
+}

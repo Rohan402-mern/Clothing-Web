@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Figtree";
+}
+.signature{
+    background-color: #F4F4F4;
+}
+.signature h1{
+color: #002D18;
+font-size: 48px;
+font-weight: 500;
+padding: 50px ;
+padding-bottom: 0px;
+padding-top: 70px ;
+}
+.signature-slider{
+  overflow-y: hidden
+}
+.slider-cont{
+    width: max-content;
+    display: flex;
+    margin:0px 50px;
+    margin-bottom: 80px;
+    gap: 50px;
+    transition: 0.6s ease-out;
+}
+.signature-product{
+    flex: 0 0 24vw;
+    max-width: 54vw;
+    box-sizing: border-box;
+  
+
+}
+.signature-product img {
+    height: auto;
+    display: block;
+    width: 100%;
+  }
+  .signature-product p{
+    margin-top: 10px;
+    color: rgb(0,73,39);
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .move{
+    display: flex;
+    margin: 20px;
+    margin-left: 88vw;
+    align-items: center;
+    gap: 10px;
+  }
+  .move p{
+    font-size: 20px;
+    font-weight: 500;
+    
+  }
+  .move svg{
+    cursor: pointer;
+  }

@@ -2,7 +2,7 @@ import React from 'react'
 import './Footer.css'
 const Footer = () => {
   return (
-    <div className='footer'>
+    <div  style={{marginTop:'157px'}} className='footer'>
       <div className="footer-1">
         <div className="footer-1-img">
         <svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px" fill="#FFFFFF"><path d="M194-194v-28h128l-50-50q-45-45-65.5-97.5T186-476q0-92 51.5-167.5T374-754v30q-73 32-116.5 99.5T214-476q0 50 19 97t59 87l50 50v-128h28v176H194Zm392-12v-30q73-32 116.5-99.5T746-484q0-50-19-97t-59-87l-50-50v128h-28v-176h176v28H638l50 50q45 45 65.5 97.5T774-484q0 92-51.5 167.5T586-206Z"/></svg>

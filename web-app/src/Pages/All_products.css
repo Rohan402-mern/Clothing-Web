@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Figtree";
+}
+.all-product{
+    background-color: #F4F4F4;
+}
+.all-product-sort{
+    margin-top: 25px;
+    color: rgb(0,45,24);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding-left: 60px;
+}
+.all-product-cont{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 23vw);
+    grid-template-columns: repeat(4, 23vw);
+    row-gap: 15px;
+    column-gap: 15px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.all-product-product img{
+    width: 23vw;
+    cursor: pointer ;
+}

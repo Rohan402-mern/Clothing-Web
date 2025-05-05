@@ -78,7 +78,7 @@ const Navbar = () => {
                 <li onClick={()=>dispatch(cat6())}>COLLECTIONS<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M480-380 276-584l20-20 184 184 184-184 20 20-204 204Z"/></svg></li>
                 <li onClick={()=>dispatch(cat7())} style={{color:"rgb(9,212,88)"}}>SHOES<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M480-380 276-584l20-20 184 184 184-184 20 20-204 204Z"/></svg></li>
                 <li onClick={()=>dispatch(cat8())} style={{color:"rgb(9,212,88)"}}>BAGS<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M480-380 276-584l20-20 184 184 184-184 20 20-204 204Z"/></svg></li>
-                <li style={{color:"rgb(9,212,88)"}}>TSHIRTS</li>
+                <li style={{color:"rgb(9,212,88)"}}>T-SHIRTS</li>
                 <li style={{color:"rgb(9,212,88)"}}>SHIRTS</li>
                 <li onClick={()=>dispatch(cat9())}>WE ARE LACOSTE<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M480-380 276-584l20-20 184 184 184-184 20 20-204 204Z"/></svg></li>
             </ul>

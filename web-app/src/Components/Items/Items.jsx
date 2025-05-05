@@ -1,5 +1,6 @@
 import React from 'react';
 import './Items.css';
+import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { products } from '../Products/All_products.js';
 import { Link } from 'react-router-dom';
@@ -11,7 +12,9 @@ const Items = () => {
    const items = useSelector((state)=> state.counter.items)
    console.log(items)
    const dispatch = useDispatch();
-
+   useEffect(() => {
+    window.scrollTo(0, 0); // scrolls to top-left of the page
+  }, []);
   if (!product) {
     return (
       <div className="product-not-found" style={{ position: 'relative', top: '157px' }}>

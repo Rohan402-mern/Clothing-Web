@@ -59,9 +59,25 @@ export const counterSlice = createSlice({
         state.items.push({ ...action.payload, quantity: 1 });
       }
     },
+    RemoveToCart:(state, action)=>{
+      state.items = state.items.filter(item => item.id !== action.payload.id);
+    },
+    increaseQuantity: (state, action) => {
+      const item = state.items.find(item => item.id === action.payload.id);
+      if (item) {
+        item.quantity += 1;
+      }
+    },
+    decreaseQuantity: (state, action) => {
+      const item = state.items.find(item => item.id === action.payload.id);
+      if (item && item.quantity > 1) {
+        item.quantity -= 1;
+      }
+    },    
   },
+
 })
 
-export const { increment,cat1,cat2,cat3,cat4,cat5,cat6,cat7,cat8,cat9,cat10,cat11,cat12,addToCart } = counterSlice.actions
+export const { increment,cat1,cat2,cat3,cat4,cat5,cat6,cat7,cat8,cat9,cat10,cat11,cat12,addToCart,RemoveToCart,increaseQuantity,decreaseQuantity } = counterSlice.actions
 
 export default counterSlice.reducer

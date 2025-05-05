@@ -2,7 +2,12 @@ import React from 'react'
 import { products } from '../Components/Products/All_products'
 import './/All_products.css'
 import { Link } from 'react-router-dom'
+import { useEffect } from 'react'
 const All_product = () => {
+
+   useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
   return (
     <div className='all-product' style={{position:'relative',top:'157px'}} >
        <div className="all-product-sort">

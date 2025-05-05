@@ -18,7 +18,6 @@ function App() {
       <Route path='/all-product' element={<All_product/>} />
       <Route path='/product/:id' element={<Items/>} />
       <Route path='/checkout' element={<Cart/>} />
-      {/* <Route path='/checkout/cart' element={<Cart/>} /> */}
       <Route path='*' element={<div><h1 style={{fontFamily:'Figtree',fontWeight:'400',fontSize:'14px',paddingTop:'157px',paddingLeft:'50px',paddingBottom:'280px',color:'rgb(0,45,24'}}>There was no 404 CMS page configured or found.</h1></div>}/>
     </Routes>
     <Footer/>

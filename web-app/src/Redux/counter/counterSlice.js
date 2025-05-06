@@ -8,6 +8,8 @@ export const counterSlice = createSlice({
     slide:1,
     // cart:0,
     items:[],
+    isSortPanelOpen: false,
+
   },
   reducers: {
     increment: (state) => {
@@ -62,22 +64,25 @@ export const counterSlice = createSlice({
     RemoveToCart:(state, action)=>{
       state.items = state.items.filter(item => item.id !== action.payload.id);
     },
+
     increaseQuantity: (state, action) => {
       const item = state.items.find(item => item.id === action.payload.id);
-      if (item) {
-        item.quantity += 1;
-      }
+      if (item) item.quantity += 1;
     },
+    
     decreaseQuantity: (state, action) => {
       const item = state.items.find(item => item.id === action.payload.id);
-      if (item && item.quantity > 1) {
-        item.quantity -= 1;
-      }
-    },    
+      if (item && item.quantity > 1) item.quantity -= 1;
+    },
+    toggleSortPanel: (state) => {
+      state.isSortPanelOpen = !state.isSortPanelOpen;
+    },
+    closeSortPanel: (state) => {
+      state.isSortPanelOpen = false;
+    },
   },
-
 })
 
-export const { increment,cat1,cat2,cat3,cat4,cat5,cat6,cat7,cat8,cat9,cat10,cat11,cat12,addToCart,RemoveToCart,increaseQuantity,decreaseQuantity } = counterSlice.actions
+export const { increment,cat1,cat2,cat3,cat4,cat5,cat6,cat7,cat8,cat9,cat10,cat11,cat12,addToCart,RemoveToCart,increaseQuantity,decreaseQuantity,toggleSortPanel,closeSortPanel } = counterSlice.actions
 
 export default counterSlice.reducer

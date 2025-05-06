@@ -94,6 +94,7 @@ const Navbar = () => {
         <Shoes/>
         <Bags/>
         <LoginSlide/>
+        
       </div>
     </div>
 

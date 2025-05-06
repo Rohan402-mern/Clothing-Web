@@ -1,12 +1,13 @@
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
+import { Suspense, lazy } from 'react';
 import './App.css'
-import Home from './Pages/Home'
-import Cart from './Pages/Cart'
+import Spinner from './Components/Lazy/Spinner';
 import Navbar from './Components/Navbar/Navbar'
 import Footer from './Components/Footer/Footer'
-import All_product from './Pages/All_product'
-import Items from './Components/Items/Items'
-
+const Home = lazy(() => import('./Pages/Home'));
+const Cart = lazy(() => import('./Pages/Cart'));
+const All_product = lazy(() => import('./Pages/All_product'));
+const Items = lazy(() => import('./Components/Items/Items'));
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
     <>
     <BrowserRouter>
     <Navbar/>
+    <Suspense fallback={<Spinner/>}>
     <Routes>
       <Route path='/' element={<Home/>} />
       <Route path='/home' element={<Home/>} />
@@ -23,6 +25,7 @@ function App() {
       <Route path='/checkout' element={<Cart/>} />
       <Route path='*' element={<div><h1 style={{fontFamily:'Figtree',fontWeight:'400',fontSize:'14px',paddingTop:'157px',paddingLeft:'50px',paddingBottom:'280px',color:'rgb(0,45,24'}}>There was no 404 CMS page configured or found.</h1></div>}/>
     </Routes>
+    </Suspense>
     <Footer/>
     </BrowserRouter>
     </>

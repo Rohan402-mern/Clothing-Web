@@ -21,7 +21,6 @@ const All_product = () => {
     } else if (sortParam === 'sort-by-category') {
       sortedProducts.sort((a, b) => a.type.localeCompare(b.type));
     }
-  
 
   return (
     <div className='all-product' style={{position:'relative',top:'157px'}} >
@@ -31,7 +30,7 @@ const All_product = () => {
        </div>
        <div className="all-product-cont">
         {sortedProducts.map((item)=>{
-            return <Link style={{textDecoration:'none'}} to={`/product/${item.id}`}><div key={item.id} className='all-product-product'>
+            return <Link key={item.id} style={{textDecoration:'none'}} to={`/product/${item.id}`}><div key={item.id} className='all-product-product'>
                 <img src={item.imageUrl} alt="" />
                 
                 <p style={{fontSize:'16px',fontWeight:'400',color:'rgb(0,45,24'}}>{item.name}</p>
